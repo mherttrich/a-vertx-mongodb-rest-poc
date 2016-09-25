@@ -44,10 +44,6 @@ public class VertxREST extends AbstractVerticle {
         mongoClient.find("glider", new JsonObject(), results -> {
             List<JsonObject> jsonObjects = results.result();
 
-          /* is this non blocking?!
-             mongoClient.find() returns immediately, but the REST client just
-             gets results, after mongo delivered all results
-          */
             List<Glider> glider = jsonObjects.stream()
                     .map(json -> Json.decodeValue(json.toString(), Glider.class))
                     .collect(Collectors.toList());

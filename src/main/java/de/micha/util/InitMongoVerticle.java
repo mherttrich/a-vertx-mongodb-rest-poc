@@ -31,7 +31,6 @@ public class InitMongoVerticle extends AbstractVerticle {
 
         MongoClient mongoClient = MongoClient.createShared(vertx, mongoconfig);
 
-
         Glider glider = new Glider("Skywalk Tequila", 2333.99f);
         glider.setItemId("2");
 

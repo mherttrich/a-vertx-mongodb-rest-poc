@@ -10,7 +10,6 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 public class Glider {
 
 
-    //for simplify just Strings
     private String name;
     private Float price;
     private String itemId;
