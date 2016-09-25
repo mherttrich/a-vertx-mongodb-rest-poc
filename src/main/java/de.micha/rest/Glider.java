@@ -1,8 +1,12 @@
 package de.micha.rest;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 /**
  * Created by micha on 4.09.16.
  */
+
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class Glider {
 
 
@@ -10,7 +14,6 @@ public class Glider {
     private String name;
     private Float price;
     private String itemId;
-
 
     public Glider() {
         super();
@@ -20,14 +23,6 @@ public class Glider {
         this.name = name;
         this.price = price;
     }
-
-   /* public String get_id() {
-        return _id;
-    }
-
-    public void set_id(String _id) {
-        this._id = _id;
-    }*/
 
     public String getName() {
         return name;
